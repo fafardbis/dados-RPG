@@ -1,0 +1,312 @@
+/* Estilo de la cabecera */
+
+.cabecera{
+  background-image: url('img/dados_fondo.jpg'); /* Ruta de tu imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la capa */
+  background-position: center; /* Centra la imagen horizontal y verticalmente */
+  /* Otros estilos para tu contenedor */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  min-height: 80px;
+  margin-bottom:20px;
+  border-bottom: 7px solid #4caf50;
+}
+
+.contenedor_dificultad {
+  border: 1px solid silver;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px 0px;
+}
+
+label.form-label {
+  font-weight: 700;
+}
+
+/* Dimensiones de los iconos */
+i {
+  padding: 0px 0px 0px 5px;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+}
+
+.cabecera h1 {
+  font-size: 1.8rem !important;
+  text-shadow: 0px 0px 6px black;
+  color: #e4ff00;
+}
+
+a.dropdown-item.list-group-item {
+    padding: 10px 15px;
+}
+
+ul.dropdown-menu.show {
+    padding: 0px;
+}
+
+.rebutjat.col {
+  border-left: 5px dotted #f19da4;
+}
+
+.resultado .resultadonumero {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.resultado .valorresultado {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid silver;
+  padding: 5px 10px;
+  border-radius: 10%;
+  width: 45px;
+  text-align: center;
+}
+
+.porcentaje span {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.rebutjat.col .dice {
+  background-color: rgb(255, 226, 226) !important;
+  border: 2px solid #dc354666;
+}
+
+.rebutjat.col .dot {
+  background-color: #dc354566;
+}
+
+.dice {
+    width: 60px; /* Ajusta el tamaño del dado aquí */
+    height: 60px; /* Ajusta el tamaño del dado aquí */
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    border-radius: 10px;
+    float: left;
+    margin-left: 10px;
+  }
+
+  
+  .dot {
+    width: 10px; /* Ajusta el tamaño de los puntos aquí */
+    height: 10px; /* Ajusta el tamaño de los puntos aquí */
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  #center {
+    top: 23px; /* Ajusta la posición del punto central */
+    left: 23px; /* Ajusta la posición del punto central */
+  }
+  
+  #top-left {
+    top: 10px; /* Ajusta la posición del punto superior izquierdo */
+    left: 10px; /* Ajusta la posición del punto superior izquierdo */
+  }
+  
+  #top-right {
+    top: 10px; /* Ajusta la posición del punto superior derecho */
+    right: 10px; /* Ajusta la posición del punto superior derecho */
+  }
+  
+  #bottom-left {
+    bottom: 10px; /* Ajusta la posición del punto inferior izquierdo */
+    left: 10px; /* Ajusta la posición del punto inferior izquierdo */
+  }
+  
+  #bottom-right {
+    bottom: 10px; /* Ajusta la posición del punto inferior derecho */
+    right: 10px; /* Ajusta la posición del punto inferior derecho */
+  }
+  
+  #middle-left {
+    top: 23px; /* Ajusta la posición del punto central izquierdo */
+    left: 10px; /* Ajusta la posición del punto central izquierdo */
+  }
+  
+  #middle-right {
+    top: 23px; /* Ajusta la posición del punto central derecho */
+    right: 10px; /* Ajusta la posición del punto central derecho */
+  }
+
+/* Estilos de tablas */
+
+td, th {
+  text-align: center;
+}
+
+/* Estilos cuando el ratón pasa sobre la fila */
+#tabla tr:hover {
+  background-color: lightgray;
+}
+
+/* Grados colores */
+.grado-1{
+  background-color: #FFCCCC;
+}
+.grado-2{
+  background-color: #FFD699;
+}
+.grado-3{
+  background-color: #FFEB99;
+}
+.grado-4{
+  background-color: #EBFF99;
+}
+.grado-5{
+  background-color: #CCFFCC;
+}
+.grado-6{
+  background-color: #99FFCC;
+}
+.grado-7{
+  background-color: #99FF99;
+}
+
+/* posición del Botón de relanzar */
+
+button#relanzar {
+  margin: 0 auto 0 0;
+}
+
+/* Sliders */
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+/* Estilo para los intervalos */
+.slider-container .intervals {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+.slider-container .intervals span {
+  font-size: 12px;
+  min-width: 15px;
+  text-align: center;
+}
+
+/* Estilos del acordeón */
+div.accordion-header {
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+} 
+
+.fracaso .accordion-body, .exito .accordion-body {
+  background-color: #ffffff6e;
+  color: black;
+}
+
+/* Tipos de resultados */
+
+.exito{
+  background-color: #f19da41f;
+  border: 1px solid #dd4d59;
+}
+.exito:hover{
+  background-color: #f19da4;
+  color: #ffffff;
+ }
+
+.fracaso{
+  background-color: #4caf501a;
+  border: 1px solid #4CAF50;
+}
+.fracaso:hover{
+  background-color: #4CAF50;
+  color: #ffffff;
+}
+
+/* Ubicación taula */
+
+#ubicacionTabla{
+  margin-top:10px;
+}
+
+.exito .detallesTirada {
+  color: #000000;
+}
+
+.fracaso .detallesTirada{
+  color: #07730b;
+}
+
+.exito:hover .detallesTirada, .fracaso:hover .detallesTirada{
+  color: #ffffff;
+}
+
+/* Eliminar */
+
+a.eliminar-btn {
+  color: black;
+  margin-left: 10px;
+}
+
+a.eliminar-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Anchos específicos para Bootstrap */
+
+.justify-final{
+  text-align: right;
+}
+
+i.bi.bi-check-circle {
+  color: #009900;
+}
+
+i.bi.bi-x-circle {
+  color: #ab0000;
+}
+
+.accordion-item:hover a,
+.accordion-item:hover i.bi.bi-x-circle,
+.accordion-item:hover i.bi.bi-check-circle {
+  color: white;
+}
+
+.accordion-item:hover a.eliminar-btn {
+  text-decoration: none;
+}

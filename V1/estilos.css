@@ -1,0 +1,112 @@
+h1 {
+  font-size: 1.5rem!important;
+}
+
+a.dropdown-item.list-group-item {
+    padding: 10px 15px;
+}
+
+ul.dropdown-menu.show {
+    padding: 0px;
+}
+
+.rebutjat.col {
+  border-left: 5px dotted #f19da4;
+}
+
+.resultado .resultadonumero {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.resultado .valorresultado {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid silver;
+  padding: 5px 10px;
+  border-radius: 10%;
+  width: 45px;
+  text-align: center;
+}
+
+.porcentaje span {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.row:first-child {
+  margin-bottom: 25px;
+}
+
+.rebutjat.col .dice {
+  background-color: rgb(255, 226, 226) !important;
+  border: 2px solid #dc354666;
+}
+
+.rebutjat.col .dot {
+  background-color: #dc354566;
+}
+
+.dice {
+    width: 60px; /* Ajusta el tamaño del dado aquí */
+    height: 60px; /* Ajusta el tamaño del dado aquí */
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    border-radius: 10px;
+    float: left;
+    margin-left: 10px;
+  }
+
+  
+  .dot {
+    width: 10px; /* Ajusta el tamaño de los puntos aquí */
+    height: 10px; /* Ajusta el tamaño de los puntos aquí */
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  #center {
+    top: 23px; /* Ajusta la posición del punto central */
+    left: 23px; /* Ajusta la posición del punto central */
+  }
+  
+  #top-left {
+    top: 10px; /* Ajusta la posición del punto superior izquierdo */
+    left: 10px; /* Ajusta la posición del punto superior izquierdo */
+  }
+  
+  #top-right {
+    top: 10px; /* Ajusta la posición del punto superior derecho */
+    right: 10px; /* Ajusta la posición del punto superior derecho */
+  }
+  
+  #bottom-left {
+    bottom: 10px; /* Ajusta la posición del punto inferior izquierdo */
+    left: 10px; /* Ajusta la posición del punto inferior izquierdo */
+  }
+  
+  #bottom-right {
+    bottom: 10px; /* Ajusta la posición del punto inferior derecho */
+    right: 10px; /* Ajusta la posición del punto inferior derecho */
+  }
+  
+  #middle-left {
+    top: 23px; /* Ajusta la posición del punto central izquierdo */
+    left: 10px; /* Ajusta la posición del punto central izquierdo */
+  }
+  
+  #middle-right {
+    top: 23px; /* Ajusta la posición del punto central derecho */
+    right: 10px; /* Ajusta la posición del punto central derecho */
+  }
+
+/* Estilos de tablas */
+
+td, th {
+  text-align: center;
+}
+  

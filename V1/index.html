@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lanzamiento de Dados</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lanzamiento de Dados en el sistema 3D6</h1>
+
+            <!-- Contenido del desplegable -->
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#"
+                    role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Seleccionar tirada
+                </a>
+
+                <a class="btn btn-secondary" href="#" onclick="generarPDF()">Generar PDF</a>
+
+                <ul class="dropdown-menu ">
+                    <li><a
+                            class="dropdown-item list-group-item list-group-item-danger"
+                            href="#" aria-current="true" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(6,3,'menor')">Tirada 3D a Menores</a></li>
+                    <li><a
+                            class="dropdown-item list-group-item list-group-item-warning"
+                            href="#" aria-current="true" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(5,3,'menor')">Tirada 2D a Menores</a></li>
+                    <li><a
+                            class="dropdown-item list-group-item list-group-item-light"
+                            ref="#" aria-current="true" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(4,3,'menor')">Tirada 1D a Menores</a></li>
+                    <li><a class="dropdown-item list-group-item" href="#" aria-current="true"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(3,3,'mayor')">Tirada normal</a></li>
+                    <li><a class="dropdown-item list-group-item list-group-item-light"
+                            href="#" aria-current="true"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(4,3,'mayor')">Tirada 1D a Mayores</a></li>
+                    <li><a class="dropdown-item list-group-item list-group-item-success"
+                            href="#" aria-current="true"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(5,3,'mayor')">Tirada 2D a Mayores</a></li>
+                    <li><a class="dropdown-item list-group-item list-group-item-info"
+                            href="#" aria-current="true"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onclick="Tirardados(6,3,'mayor')">Tirada 3D a Mayores</a></li>
+                </ul>
+            </div>
+            
+            <div id="ubicacionTabla">
+                <table id="tabla" class="table">
+                    <!-- Aquí van las filas y columnas de la tabla -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel"></h1>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="resultado"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="relanzar" type="button"
+                            class="btn btn-secondary">Relanzar tirada</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insertar archivo JS -->
+        <script src="js/html2pdf.bundle.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="dados.js"></script>
+
+    </body>
+</html>

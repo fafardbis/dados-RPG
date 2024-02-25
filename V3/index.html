@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lanzamiento de Dados</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="estilos.css" rel="stylesheet">
+
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cabecera">
+                <h1>Lanzamiento de Dados en el Sistema 3D6</h1>
+            </div>
+
+            <!-- Contenido del desplegable -->
+
+            <div class="row contenedor_dificultad">
+                <div class="col-md-5">
+                    <label for="slider" class="form-label">Dificultad (3 y 18): <span id="sliderValue"></span></label>
+                    <input type="range" class="form-range" min="3" max="18" value="9" id="slider">
+                </div>
+                <div class="col-md-5">
+                    <label for="slider_hab" class="form-label">Habilidad (1 y 7): <span id="sliderValue_hab"></span>  </label>
+                    <input type="range" class="form-range" min="1" max="7" value="4" id="slider_hab">
+                </div>
+                <div class="col-md-2">
+                    <a class="btn btn-secondary" href="#" aria-current="true" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="realizarTirada()">Tirada</a>
+                </div>
+            </div>
+
+            <a class="btn btn-primary" data-toggle="modal" data-target="#graficoModal" href="#" onclick="pintarGrafico()">Mostrar Gráfico</a>
+            <a class="btn btn-secondary" href="#" onclick="generarPDF()">Generar PDF</a>
+            <a class="btn btn-secondary" href="#" onclick="descargarLocalStorage()">Descargar JSon</a>
+
+            
+            <div id="ubicacionTabla">
+                <table id="tabla" class="table">
+                    <!-- Aquí van las filas y columnas de la tabla -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Modal para los dados -->
+        <div class="modal fade" id="exampleModal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel"></h1>
+                    </div>
+                    <div class="modal-body">
+                        <div id="resultado"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="relanzar" type="button" class="btn btn-secondary">Relanzar tirada</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para mostrar el gráfico -->
+        <div class="modal fade" id="graficoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Gráfico de Tiradas</h5>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenedor para el gráfico -->
+                    <canvas id="graficoTiradas"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Insertar archivo JS -->
+
+        <script src="js/html2pdf.bundle.min.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+        <!-- Lanzar ja inicial -->
+        
+        <script src="dados.js"></script>
+    </body>
+</html>
